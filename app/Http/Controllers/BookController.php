@@ -7,6 +7,7 @@ use App\Models\Bookshelf;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
 
 class BookController extends Controller
 {
@@ -125,4 +126,9 @@ class BookController extends Controller
         ->setPaper('a4') 
         ->stream('data_buku.pdf');
     }
+
+    public function export(){
+      return Excel::download(new BookExport,'data_buku.xlsx' );
+    }
+
 }
