@@ -10,7 +10,10 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
 
-                    <x-primary-button tag="a" href="{{ route('book.create') }}">Tambah Data Buku</x-primary-button>
+                    <x-primary-button tag="a" href="{{ route('book.create') }}">Tambah</x-primary-button>
+                    <x-primary-button target="_blank" tag="a" href="{{ route('book.print') }}">Cetak</x-primary-button>
+                    <x-primary-button tag="a" href="{{ route('book.export') }}">Export</x-primary-button>
+                    <x-primary-button tag="a" href="{{ route('book.import') }}">Import</x-primary-button>
 
                     <x-table>
                         <x-slot name="header">
